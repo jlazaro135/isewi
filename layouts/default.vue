@@ -1,6 +1,7 @@
 <template>
-  <header class="shadow-sm bg-white">
-    <nav class="container mx-auto p-4  flex justify-between">
+  <header class="shadow-sm py-4">
+    <UContainer>
+      <nav class="flex justify-between">
         <NuxtLink to="/">LOGO</NuxtLink>
         <ul class="flex gap-4">
             <li><NuxtLink to="/">Inicio</NuxtLink></li>
@@ -8,6 +9,7 @@
             <li><NuxtLink to="/about">Nosotros</NuxtLink></li>
         </ul>
     </nav>
+    </UContainer>
   </header>
   <div class="container mx-auto p-4 ">
       <slot />
