@@ -1,6 +1,6 @@
 <template>
-  <TheHeader></TheHeader>
-  <div class="container mx-auto p-4 ">
+  <TheHeader />
+  <div>
       <slot />
   </div>
 </template>
