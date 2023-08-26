@@ -1,29 +1,29 @@
 <template>
     <div class="w-full h-full">
         <header ref="referenceRef" class="relative">
-            <div class="flex justify-between items-center flex-wrap md:flex-nowrap px-4 md:px-10 py-2 md:py-5 w-full h-full border-0 bg-primary-700 border-neutral-200 md:h-20 md:z-10">
+            <div class="flex justify-between items-center flex-wrap md:flex-nowrap px-4 md:px-10 py-2 md:py-5 w-full h-full border-0 border-neutral-200 md:z-10">
                 <div class="flex items-center">
                     <SfButton
                     variant="tertiary"
                     square
                     aria-label="Close menu"
-                    class="block md:hidden mr-5 bg-transparent hover:bg-primary-800 hover:text-white active:bg-primary-900 active:text-white"
+                    class="block md:hidden mr-5 bg-transparent hover:bg-primary-700 hover:text-white active:bg-primary-900 active:text-white"
                     @click="openMenu([])"
                     >
-                        <SfIconMenu class="text-white" />
+                        <SfIconMenu class="text-primary-600" />
                     </SfButton>
                     <a
                     href="#"
                     aria-label="SF Homepage"
-                    class="flex shrink-0 w-8 h-8 lg:w-[12.5rem] lg:h-[1.75rem] items-center mr-auto text-white md:mr-10 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
+                    class="flex shrink-0 items-center mr-auto text-primary-600 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
                     >
                         <picture>
-                            <source srcset="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/vsf_logo_white.svg" media="(min-width: 1024px)" />
-                            <img src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/vsf_logo_sign_white.svg" alt="Sf Logo" />
+                            <source srcset="@/i_logo.png" media="(min-width: 1024px)" />
+                            <img class="max-w-[100px] brightness-110 hue-rotate-[7deg]" src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/vsf_logo_sign_white.svg" alt="Sf Logo" />
                         </picture>
                     </a>
                 </div>
-                <form role="search" class="hidden md:flex flex-[100%] ml-10" @submit.prevent="search">
+                <form role="search" class="hidden md:flex flex-grow ml-10" @submit.prevent="search">
                 <SfInput
                     v-model="inputValue"
                     type="search"
@@ -52,7 +52,7 @@
                     v-for="actionItem in actionItems"
                     :key="actionItem.ariaLabel"
                     :aria-label="actionItem.ariaLabel"
-                    class="text-white bg-transparent hover:bg-primary-800 hover:text-white active:bg-primary-900 active:text-white"
+                    class="text-primary-600 bg-transparent hover:bg-primary-600 hover:text-white active:bg-primary-700 active:text-white"
                     variant="tertiary"
                     square
                 >
@@ -92,7 +92,7 @@
             <!-- Desktop dropdown -->
             <nav ref="floatingRef">
                 <ul
-                class="hidden md:flex px-6 py-2 bg-white border-b border-b-neutral-200 border-b-solid"
+                class="hidden md:flex px-6 bg-white border-b border-b-neutral-200 border-b-solid bg-primary-600"
                 @blur="
                     (event) => {
                     if (!(event.currentTarget as Element).contains((event.relatedTarget as Element))) {
@@ -105,13 +105,14 @@
                     <SfButton
                     ref="triggerRefs"
                     variant="tertiary"
-                    class="group mr-2 !text-neutral-900 hover:!bg-neutral-200 hover:!text-neutral-700 active:!bg-neutral-300 active:!text-neutral-900"
+                    size="lg"
+                    class="group mr-2 py-2 !text-white hover:!bg-primary-700 hover:!text-white active:!bg-neutral-300 active:!text-neutral-900 rounded-none"
                     @mouseenter="openMenu([menuNode.key])"
                     @click="openMenu([menuNode.key])"
                     >
                     <span>{{ menuNode.value.label }}</span>
                     <SfIconChevronRight
-                        class="rotate-90 text-neutral-500 group-hover:text-neutral-700 group-active:text-neutral-900"
+                        class="rotate-90 text-white group-hover:text-white group-active:text-neutral-900"
                     />
                     </SfButton>
 
