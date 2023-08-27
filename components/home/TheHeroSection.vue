@@ -1,33 +1,25 @@
 <template>
-  <div class="relative min-h-[600px]">
+  <div class="relative flex lg:block min-h-[600px]">
     <picture>
-      <source srcset="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/hero-bg.png" media="(min-width: 768px)" />
+      <source srcset="@/assets/img/hero.jpg" media="(min-width: 768px)" />
       <img
-        src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/hero-bg-mobile.png"
-        class="absolute w-full h-full z-[-1] md:object-cover"
+        src="@/assets/img/hero_mb.jpg"
+        class="absolute w-full h-full z-[-1] md:object-cover opacity-50"
       />
     </picture>
-    <div class="md:flex md:flex-row-reverse md:justify-center max-w[1536px] mx-auto md:min-h-[600px]">
-      <div class="flex flex-col md:basis-2/4 md:items-stretch md:overflow-hidden">
-        <img
-          src="https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/hero-headphones.png"
-          alt="Headphones"
-          class="h-full object-cover object-left"
-        />
-      </div>
+    <div class="lg:flex max-w[1536px] m-auto lg:min-h-[600px]">
       <div class="p-4 md:p-10 md:max-w-[768px] md:flex md:flex-col md:justify-center md:items-start md:basis-2/4">
         <p class="typography-text-xs md:typography-text-sm font-bold tracking-widest text-neutral-500 uppercase">
-          Feel the music
+          Relocaliza tu estilo
         </p>
         <h1 class="typography-headline-2 md:typography-headline-1 md:leading-[67.5px] font-bold mt-2 mb-4">
-          New Wireless Pro
+          MODA CERCA DE TI
         </h1>
         <p class="typography-text-base md:typography-text-lg">
-          Spatial audio. Adjustable ear cups. On-device controls. All-day battery.
+          Moda de autor, sostenible y de proximidad.
         </p>
         <div class="flex flex-col md:flex-row gap-4 mt-6">
-          <SfButton size="lg"> Order now </SfButton>
-          <SfButton size="lg" variant="secondary" class="bg-white"> Show more </SfButton>
+          <SfButton size="lg" variant="secondary" class="bg-white"> Más Información </SfButton>
         </div>
       </div>
     </div>

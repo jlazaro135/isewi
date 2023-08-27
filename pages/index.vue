@@ -1,6 +1,7 @@
 <template>
   <TheHeroSection />
-  <TheProductSlider />
+    <TheMission />
+    <TheProductSlider />
 </template>
 
 <script lang="ts" setup>

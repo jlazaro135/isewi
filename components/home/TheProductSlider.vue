@@ -1,6 +1,11 @@
 <template>
-    <div class="container mx-auto px-4">
-        <h3 class="typography-headline-3 md:typography-headline-2 md:leading-[67.5px] font-bold text-center mt-2 mb-4">Productos destacados</h3>
+    <TheSectionContainer>
+        <TheSectionTitle
+        title="Productos destacados"
+        viewbox="0 0 512 512"
+        >
+        <TheHanger/>
+        </TheSectionTitle>
         <SfScrollable
         class="m-auto py-4 items-center w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         buttons-placement="floating"
@@ -62,7 +67,7 @@
             </SfButton>
         </template>
         </SfScrollable>
-    </div>
+    </TheSectionContainer>
   </template>
   
   <script lang="ts" setup>

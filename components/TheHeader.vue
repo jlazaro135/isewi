@@ -92,7 +92,7 @@
             <!-- Desktop dropdown -->
             <nav ref="floatingRef">
                 <ul
-                class="hidden md:flex px-6 bg-white border-b border-b-neutral-200 border-b-solid bg-primary-600"
+                class="hidden md:flex bg-primary-600"
                 @blur="
                     (event) => {
                     if (!(event.currentTarget as Element).contains((event.relatedTarget as Element))) {
@@ -167,7 +167,7 @@
                 ref="drawerRef"
                 v-model="isOpen"
                 placement="left"
-                class="md:hidden right-[50px] max-w-[376px] bg-white overflow-y-auto"
+                class="md:hidden right-[50px] max-w-[376px] bg-white overflow-y-auto z-10"
             >
                 <nav>
                 <div class="flex items-center justify-between p-4 border-b border-b-neutral-200 border-b-solid">

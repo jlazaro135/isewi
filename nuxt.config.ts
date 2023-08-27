@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   components: [
     { path: '~/components/home' },
+    { path: '~/components/icons' },
     '~/components'
   ]
 })
