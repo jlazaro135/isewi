@@ -1,6 +1,6 @@
 <template>
     <div class="m-10">
-        <span class="relative flex items-center justify-center m-3 mx-auto w-fit p-2 rounded-full border-2 border-primary-600 text-primary-600">
+        <span class="relative flex items-center justify-center m-3 mx-auto w-fit p-2 rounded-full border-2 bg-primary-600 text-white">
             <SfIconBase
             :viewbox="viewbox ?? '0 0 32 32'"
             size="lg"
